@@ -504,8 +504,6 @@ body:not(.has-banner-image),
   .border-box;
   width: auto;
   margin: auto;
-  max-width: @pageWidth;
-  padding: (@sitePadding * 3) @sitePadding;
 
   .font-smoothing(@pageBgColor);
 }
@@ -513,6 +511,16 @@ body:not(.has-banner-image),
 #content {
   width: 100%;
   display: block;
+  .sqs-block-content {
+    width: 960px;
+    margin: 0 auto;
+  }
+  .code-block {
+    background: #f0f0f0; 
+    &:first-child {
+      padding-top: 17px; 
+    }
+  }
 }
 
 .collection-type-page #content {
