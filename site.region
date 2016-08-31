@@ -218,9 +218,6 @@
       {.end}
 
       <main id="page" role="main">
-				<div id="content" class="main-content test" data-content-field="main-content">
-         {squarespace.main-content}
-        </div><!-- comment the linebreak between these two elements because science -->
         {.section collection}
         {.collectionTypeNameEquals? products}{.section categories}<div id="categoryNav">
           <input type="checkbox" name="category-nav-toggle" id="categoryNavToggle" class="category-nav-toggle hidden" />
