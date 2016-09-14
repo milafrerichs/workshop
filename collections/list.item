@@ -1,7 +1,7 @@
 <div class="list-item">
   {.section item}
     {.section customContent}
-      <i class="fa {{icon}}"></i>
+      <i class="fa {icon}"></i>
     {.end}
     <h1 data-content-field="title" class="entry-title p-name">{title}</h1>
 

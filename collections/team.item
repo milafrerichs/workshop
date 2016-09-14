@@ -1,0 +1,12 @@
+<div class="team-item">
+  {.section item}
+    {.section customContent}
+      <img {{photo|image-meta}}" />
+    {.end}
+    <h3 data-content-field="title" class="entry-title p-name">{title}</h1>
+    {.section customContent}
+      <h4>{profession}</h4>
+      <p>{email}</p>
+    {.end}
+  {.end}
+</div>
