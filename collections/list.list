@@ -1,0 +1,8 @@
+<div class="list">
+
+{.section collection}
+  {.repeated section collections}
+    {body}
+  {.end}
+{.end}
+</div>
