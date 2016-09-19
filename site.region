@@ -76,7 +76,22 @@
       </div>
       <div class="section-content">
         <div class="container">
-        <squarespace:block-field id="blockField1" columns="12"/>
+        <squarespace:block-field id="blockField2" columns="12"/>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="container">
+        <squarespace:block-field id="blockField3" columns="12"/>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="container">
+        <squarespace:block-field id="blockField4" columns="12"/>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="container">
+        <squarespace:block-field id="blockField5" columns="12"/>
         </div>
       </div>
 				<div id="content" class="main-content" data-content-field="main-content">
