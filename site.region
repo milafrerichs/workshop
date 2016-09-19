@@ -16,23 +16,42 @@
     </div>
     <div id="siteWrapper" class="clearfix">
       <squarespace:query collection="header" limit="1">
-        <div class="banner2 padding-top-60" id="6">
-          <div class="container">
-            <div class="row">
-              {.repeated section items}
-                {.section customContent}
+      {.repeated section items}
+        {.section customContent}
+        <div class="banner2 padding-top-60" id="6" style="background-image: url({image.assetUrl}?format=3000w);background-repeat: no-repeat;">
+            <div class="container">
+              <div class="row">
                   <div class="col-md-6 col-sm-6 col-xs-12"> 
-                    <img {image|image-meta} />
+                    <img id="brand" {brand|image-meta} />
+                    <h2>{subheadlibe}</h2>
                   </div>
                   <div class="col-md-6 col-sm-6 col-xs-12 banner2-content"> 
                     <div class="comment-box">
                       <div class="header">
                         <h1>{headline}</h1>
-                        <h2>{subheadline}</h2>
-                        <img id="brand" {brand|image-meta} />
                       </div>
                     </div>
                   </div>
+									<div class="col-md-12 col-sm-12 col-xs-12">	
+										<div class="form2 col-md-10 col-sm-10 col-xs-12">
+											<div class="sub-form2">	
+														<form class="mailchimp validate" novalidate="true">
+															<div class="in-type">
+																<input type="email" name="EMAIL" placeholder="Deine E-Mail Adresse" class="required">
+															</div>
+															<div class="message3-btn">
+																<input type="submit" value="Bleib Informiert" class="submit mailchimp" name="submit" novalidate="true">
+															</div>
+															<div class="clearfix"></div>
+															<div class="subscription-success tx-left"></div>
+															<div class="subscription-error tx-left"></div>
+														</form>
+											</div>
+										</div>
+									</div>
+                  <script>
+                  console.log('image', {image|json-pretty} );
+                  </script>
                 {.end}
               {.end}
             </div>
@@ -46,7 +65,7 @@
         </div>
       </div>
 
-      <div class="section-content">
+      <div class="section-content services">
         <div class="container">
           <squarespace:query collection="was-dich-erwartet" limit="10">
             <div class="row">
