@@ -1,0 +1,10 @@
+<div class="header">
+  {.section item}
+    {.section customContent}
+      <img {image|image-meta}" />
+      <h1>{headline}</h1>
+      <img id="brand" {brand|image-meta} />
+      <h2>{subheadline}</h2>
+    {.end}
+  {.end}
+</div>
