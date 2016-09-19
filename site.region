@@ -94,9 +94,6 @@
         <squarespace:block-field id="blockField5" columns="12"/>
         </div>
       </div>
-				<div id="content" class="main-content" data-content-field="main-content">
-         {squarespace.main-content}
-        </div>
 
       <footer id="footer" role="contentinfo">
         <div class="footer-inner">
