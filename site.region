@@ -11,6 +11,59 @@
   </head>
 
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}{.if item}{.section item}{.if productType}{.or}{.background-source-video?} has-banner-image item-main-image{.or}{.main-image?} has-banner-image item-main-image{.end}{.end}{.end}{.end}{.or}{.section collection}{.collectionTypeNameEquals? index}{.section collections}{.section 0}{.background-source-video?} has-banner-image index-page{.or}{.main-image?} has-banner-image index-page{.end}{.end}{.end}{.end}{.or}{.background-source-video?} has-banner-image general-page{.or}{.main-image?} has-banner-image general-page{.end}{.end}{.end}{.end}{.end}">
+
+		<div class="top-social2 padding-top-20" style="">
+			<div class="container top-nav clearfix">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12 ">
+							<div class="navbar5-logo col-md-4 col-sm-4 col-xs-12">	
+								{.section website}
+								<script>
+									console.log({@|json-pretty});
+								</script>
+								{.end}
+								<a href="/" class=""><img alt="" src="https://static1.squarespace.com/static/57bc544a6a4963629639e7a4/t/57e3c87e414fb59aead05f77/1474545790885/brandcamp.png?format=50w"></a>
+							</div>
+							<div class="header-main col-md-7 col-sm-7 col-xs-12 padding-0">
+								<div class="header2  cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+										<nav class="navbar navbar-inverse navbar-static-top marginBottom-0">
+										<div class="navbar-header">
+											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+												<span class="sr-only">Toggle navigation</span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+											</button>
+										</div>
+										<div class="collapse navbar-collapse text-center" id="navbar-collapse-1">
+											<ul class="nav navbar-nav">
+												<li class=""><a href="#">home</a></li>
+												<li><a href="#1">about</a></li>
+												<li><a href="#2">Why choose us  </a>
+												</li>
+												<li><a href="#3"> pricing </a>
+												</li>
+												<li><a href="#4"> reviews </a>
+												</li>
+												<li>
+													<a href="#6" id="singh-uppp">SIGNUP</a>
+												</li>
+											</ul>
+										</div><!-- /.navbar-collapse -->
+									</nav>
+							  </div> 					
+							</div> 					
+							<div class="nav-btnn" id="showRight">
+								<ul>
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+					</div>
+			</div>
+		</div>
+    </div>
     <div id="sidecarNav">
       <squarespace:navigation navigationId="mainNav" template="mobile-navigation" />
     </div>
@@ -49,9 +102,6 @@
 											</div>
 										</div>
 									</div>
-                  <script>
-                  console.log('image', {image|json-pretty} );
-                  </script>
                 {.end}
               {.end}
             </div>
@@ -98,6 +148,34 @@
         <squarespace:block-field id="blockField2" columns="12"/>
         </div>
       </div>
+      <div class="section-content team">
+        <div class="container">
+          <squarespace:query collection="team" limit="10">
+            <div class="row">
+
+              {.repeated section items}
+                <div class="list-item col-md-4 col-sm-4 col-xs-12">
+                  <div class="team">
+									{.section customContent}
+                    <div class="image">
+												<img {photo|image-meta}>
+                    </div>
+                    <h5 data-content-field="title" class="entry-title p-name">{title}</h5>
+										<h6 class="profession">{profession}</h6>
+										<p>
+                      {.section body}
+                        {@}
+                      {.end}
+                    </p>
+										<a href="mailto:{email}">{email}</a>
+                  </div>
+                </div>
+								{.end}
+              {.end}
+            </div>
+          </squarespace:query>
+        </div>
+      </div>
       <div class="section-content">
         <div class="container">
         <squarespace:block-field id="blockField3" columns="12"/>
@@ -108,6 +186,30 @@
         <squarespace:block-field id="blockField4" columns="12"/>
         </div>
       </div>
+      <div class="section-content prices">
+        <div class="container">
+          <squarespace:query collection="plans" limit="10">
+            <div class="row">
+
+              {.repeated section items}
+								<div class="col-md-3 col-sm-3 col-xs-12 text-center">
+
+									<div class="plan">
+										<h3>{title}</h3>
+										<p>{body}</p>
+										<div class="price">
+											{.section customContent}
+											<p><span>{price}</span>€</p>
+											<p class="early-bird">{early-bird}</p>
+											{.end}
+										</div>
+									</div>
+								</div>
+						{.end}
+						</div>
+				</squarespace:query>
+				</div>
+			</div>
       <div class="section-content">
         <div class="container">
         <squarespace:block-field id="blockField5" columns="12"/>
